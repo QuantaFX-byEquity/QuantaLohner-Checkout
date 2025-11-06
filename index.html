@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QuantaLohner — Smart FX Engine</title>
+    <meta name="description" content="QuantaLohner — a Python-based FX engine with 9 Gatekeepers built by traders, finance experts, and engineers. Plans: 1, 3, 6 months. PayPal / card checkout." />
+
+    <!-- Classic elegant typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+      :root{
+        --bg:#ffffff;           /* page background */
+        --ink:#0f1e3a;          /* primary text: deep blue */
+        --muted:#4c5a76;        /* secondary text */
+        --edge:#e6ecf5;         /* borders */
+        --panel:#ffffff;        /* light panel */
+        --accent:#0f4c81;       /* accent blue */
+        --gold:#c9a227;         /* accent gold */
+        --max:980px;
+        --r:16px;
+        --s1:6px; --s2:10px; --s3:14px; --s4:18px; --s5:24px; --s6:36px; --s7:56px;
+      }
+      html,body{height:100%;margin:0;background:#ffffff !important}
+      body{font-family:"Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--ink); line-height:1.5}
+      .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--s4)}
+
+      /* Header */
+      .header{border-bottom:1px solid var(--edge);background:#fff}
+      .brand{display:flex;flex-direction:column;align-items:center;gap:var(--s2);padding:var(--s6) 0 var(--s5)}
+      .logo{height:180px;width:180px;border-radius:14px;object-fit:cover;display:inline-block}
+      .title{font-family:"Playfair Display", serif;font-weight:700;letter-spacing:.2px;font-size:clamp(28px,4vw,40px);margin:0;text-align:center;color:var(--ink)}
+      .tag{color:var(--muted);font-weight:600;margin-top:2px;text-align:center}
+
+      /* Hero */
+      .hero{padding:var(--s5) 0}
+      .lede{font-size:18px;color:var(--ink);max-width:860px;margin:0 auto;text-align:center}
+      .lede b{font-weight:800}
+      .chips{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:var(--s4)}
+      .chip{border:1px solid var(--edge);background:#ffffff;border-radius:999px;color:var(--muted);padding:8px 12px;font-size:13px;font-weight:700}
+
+      /* Sections */
+      .section{padding:var(--s6) 0;border-top:0}
+      h3{font-family:"Playfair Display", serif;font-weight:700;margin:0 0 var(--s4) 0;color:var(--ink)}
+      .muted{color:var(--muted)}
+
+      /* Cards */
+      .card{background:#ffffff;border:1px solid var(--edge);border-radius:var(--r)}
+      .pad{padding:var(--s5)}
+
+      /* Pricing */
+      .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--s4)}
+      .plan{background:#fff;border:1px solid var(--edge);border-radius:14px;padding:var(--s5);display:flex;flex-direction:column;gap:var(--s3)}
+      .plan h4{margin:0;font-size:18px;font-weight:800}
+      .price{font-size:34px;font-weight:800}
+      .inc{font-size:12.5px;color:var(--muted)}
+      .features{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+      .features li{display:flex;gap:8px}
+      .features li:before{content:"";display:inline-block;width:8px;height:8px;border-radius:999px;background:var(--accent);margin-top:8px}
+      .pp-marks{display:flex;align-items:center;gap:12px}
+      .pp-cards{max-width:220px;height:auto}
+      .pp-btn{display:inline-flex;align-items:center;justify-content:center;border:none;border-radius:10px;min-width:12rem;padding:.75rem 1rem;font-weight:800;background:#FFC439;color:#111;cursor:pointer}
+
+      /* Layout helpers */
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--s4)}
+      .small{font-size:12.5px}
+
+      /* Footer */
+      footer{border-top:1px solid var(--edge);background:#ffffff}
+      .foot{display:flex;align-items:center;justify-content:space-between;padding:var(--s5) 0;color:var(--muted)}
+
+      /* Links */
+      a.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none;border:1px solid var(--edge);background:#ffffff;color:var(--accent)}
+      a.btn:hover{background:#eef4fb}
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="wrap brand">
+        <img class="logo" src="https://i.ibb.co/DP9zKPB5/Chat-GPT-Image-Nov-6-2025-10-41-44-PM.png" alt="QuantaLohner logo"/>
+        <h1 class="title">QuantaLohner</h1>
+        <div class="tag">Smart FX Engine — Python • 9 Gatekeepers</div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Hero -->
+      <section class="hero">
+        <p class="lede">
+          We are a team of <b>traders, finance experts, and engineers</b> at Equity. We built a ~1800‑line <b>Python</b> engine with <b>9 risk Gatekeepers</b> that analyze pairs and account for <b>human psychology</b>—a gap most bots/tools miss. Historic hit‑rate near <b>70%</b> (variable). Safety first: when risk is high, it recommends <b>do not trade</b> and explains why. Updated continuously for political/economic changes. AI is used <b>only as a calculator</b> to accelerate computation.
+        </p>
+        <div class="chips">
+          <span class="chip">Continuous updates</span>
+          <span class="chip">Beginner‑friendly</span>
+          <span class="chip">Private server access</span>
+          <span class="chip">Support included</span>
+        </div>
+      </section>
+
+      <!-- Supported pairs -->
+      <section class="section" id="pairs">
+        <h3>Supported pairs</h3>
+        <div class="card pad">
+          <ul class="features">
+            <li>Gold <span class="muted small">(XAUUSD)</span></li>
+            <li>Silver <span class="muted small">(XAGUSD)</span></li>
+            <li>Oil <span class="muted small">(XTIUSD)</span></li>
+            <li>GBP to JPY <span class="muted small">(GBPJPY)</span></li>
+          </ul>
+          <p class="small muted" style="margin-top:10px">Need another pair? We can customize and program it separately at an additional cost — contact us for a quote.</p>
+        </div>
+      </section>
+      <!-- Pricing -->
+      <section class="section" id="plans">
+        <h3>Choose your plan</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin:-8px 0 var(--s4)">
+          <span class="small muted">Default coverage: Gold, Silver, Oil, GBP/JPY. Additional pairs require a custom build.</span>
+          <span class="pp-marks">
+            <img src="https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom.svg" alt="PayPal" style="height:20px"/>
+            <img class="pp-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="Cards"/>
+          </span>
+        </div>
+        <div class="pricing">
+          <!-- 1M -->
+          <div class="plan">
+            <h4>1 Month</h4>
+            <div class="price">$25 <span class="inc">(incl. taxes)</span></div>
+            <ul class="features">
+              <li>Private server login</li>
+              <li>All 9 Gatekeepers</li>
+              <li>Onboarding support</li>
+            </ul>
+            <div>
+            <style>.pp-6QFBFTP259L9W{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+            <form action="https://www.paypal.com/ncp/payment/6QFBFTP259L9W" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+              <input class="pp-6QFBFTP259L9W" type="submit" value="Pay Now" />
+              <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+              <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+            </form>
+          </div>
+          </div>
+
+          <!-- 3M -->
+          <div class="plan">
+            <h4>3 Months</h4>
+            <div class="price">$52 <span class="inc">(incl. taxes)</span></div>
+            <ul class="features">
+              <li>Everything in 1 Month</li>
+              <li>Continuous updates during term</li>
+              <li>Better value to start</li>
+            </ul>
+            <div>
+            <style>.pp-VZ7L2FREHE97Q{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+            <form action="https://www.paypal.com/ncp/payment/VZ7L2FREHE97Q" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+              <input class="pp-VZ7L2FREHE97Q" type="submit" value="Pay Now" />
+              <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+              <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+            </form>
+          </div>
+          </div>
+
+          <!-- 6M -->
+          <div class="plan">
+            <h4>6 Months</h4>
+            <div class="price">$98 <span class="inc">(incl. taxes)</span></div>
+            <ul class="features">
+              <li>Best mid‑term value</li>
+              <li>Extended support</li>
+              <li>Duration discount</li>
+            </ul>
+            <div>
+            <style>.pp-48TUPELXCCU6J{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+            <form action="https://www.paypal.com/ncp/payment/48TUPELXCCU6J" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+              <input class="pp-48TUPELXCCU6J" type="submit" value="Pay Now" />
+              <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+              <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+            </form>
+          </div>
+          </div>
+        </div>
+        <p class="small muted" style="margin-top:var(--s4)">If hosted buttons don’t load, the direct PayPal links above still work. Apple Pay / card availability depends on country and merchant settings.</p>
+      </section>
+
+      <!-- Crypto Payments -->
+      <section class="section" id="crypto">
+        <h3>Pay with Crypto (BEP‑20 / BNB Smart Chain)</h3>
+        <p class="small muted" style="margin:0 0 var(--s4) 0">We accept <b>BTCB (BTC)</b>, <b>ETH (BEP‑20)</b>, and <b>USDT (BEP‑20)</b>. All payments go to the same BEP‑20 address below.</p>
+        <div class="grid">
+          <div class="card pad">
+            <h4 style="margin:0 0 10px 0">BTCB (BTC)</h4>
+            <img src="https://i.ibb.co/4Zj98xDd/IMG-0735-2.jpg" alt="BTC BEP20 QR" style="width:140px;height:140px;object-fit:contain;border:1px solid var(--edge);border-radius:12px;background:#fff"/>
+            <div style="display:flex;gap:8px;align-items:center;margin-top:12px">
+              <input id="addr-bep20-1" class="small" style="flex:1;border:1px solid var(--edge);padding:12px;border-radius:10px" value="0xb7cdb7fcc21556870f78817e51f0fbd2d195f144" readonly>
+              <button class="btn" type="button" onclick="copyAddr('addr-bep20-1')">Copy</button>
+            </div>
+            <p class="small muted" style="margin:8px 0 0">Network: <b>BEP‑20 (BNB Smart Chain)</b>.</p>
+          </div>
+
+          <div class="card pad">
+            <h4 style="margin:0 0 10px 0">ETH (BEP‑20)</h4>
+            <img src="https://i.ibb.co/HLCVHQpF/IMG-0734-2.jpg" alt="ETH BEP20 QR" style="width:140px;height:140px;object-fit:contain;border:1px solid var(--edge);border-radius:12px;background:#fff"/>
+            <div style="display:flex;gap:8px;align-items:center;margin-top:12px">
+              <input id="addr-bep20-2" class="small" style="flex:1;border:1px solid var(--edge);padding:12px;border-radius:10px" value="0xb7cdb7fcc21556870f78817e51f0fbd2d195f144" readonly>
+              <button class="btn" type="button" onclick="copyAddr('addr-bep20-2')">Copy</button>
+            </div>
+            <p class="small muted" style="margin:8px 0 0">Network: <b>BEP‑20 (BNB Smart Chain)</b>.</p>
+          </div>
+
+          <div class="card pad">
+            <h4 style="margin:0 0 10px 0">USDT (BEP‑20)</h4>
+            <img src="https://i.ibb.co/JwctBN5v/IMG-0733-2.jpg" alt="USDT BEP20 QR" style="width:140px;height:140px;object-fit:contain;border:1px solid var(--edge);border-radius:12px;background:#fff"/>
+            <div style="display:flex;gap:8px;align-items:center;margin-top:12px">
+              <input id="addr-bep20-3" class="small" style="flex:1;border:1px solid var(--edge);padding:12px;border-radius:10px" value="0xb7cdb7fcc21556870f78817e51f0fbd2d195f144" readonly>
+              <button class="btn" type="button" onclick="copyAddr('addr-bep20-3')">Copy</button>
+            </div>
+            <p class="small muted" style="margin:8px 0 0">Network: <b>BEP‑20 (BNB Smart Chain)</b>.</p>
+          </div>
+        </div>
+        <p class="small muted" style="margin-top:10px">After sending, DM us on Instagram with <b>TX hash</b>, <b>amount</b>, and <b>plan (1m/3m/6m)</b>. We activate access after confirmation.</p>
+        <a class="btn" href="https://instagram.com/YourAdminPage" target="_blank" rel="noopener">Message Instagram Admin</a>
+      </section>
+
+      <!-- How it works -->
+      <section class="section" id="how">
+        <h3>How it works</h3>
+        <div class="grid">
+          <div class="card pad" style="background:#ffffff">
+            <h4 style="margin-top:0">Workflow</h4>
+            <ul class="features">
+              <li>Upload 3 screenshots of the pair (30m / 1h / 4h) using our free indicator pack.</li>
+              <li>Engine analyzes structure, momentum, liquidity, volatility, news context, and <b>psychology</b>.</li>
+              <li>Clear output: <b>Trade / Do not trade</b>, with the rationale.</li>
+            </ul>
+          </div>
+          <div class="card pad" style="background:#ffffff">
+            <h4 style="margin-top:0">What you need</h4>
+            <ul class="features">
+              <li>ChatGPT account (Plus recommended) — AI is used only to crunch numbers quickly.</li>
+              <li>MetaTrader 5 desktop + our free indicator pack.</li>
+              <li>Subscription unlocks our private server (18 years of distilled know‑how).</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card pad" style="margin-top:var(--s4)">
+          <strong>Disclaimer:</strong> Past performance does not guarantee future results. Trading involves risk and you may lose capital. This is a software/information product, not investment advice.
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <h3>After payment</h3>
+        <p class="muted">Message our Instagram admin to receive the free indicator pack and MT5 setup.</p>
+        <a class="btn" href="https://instagram.com/YourAdminPage" target="_blank" rel="noopener">Open Instagram Admin</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot">
+        <div>© <span id="y"></span> QuantaLohner</div>
+        <div>Secure checkout via PayPal / Card</div>
+      </div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+      <script>
+      function copyAddr(id){
+        const el=document.getElementById(id);
+        el.select(); el.setSelectionRange(0,99999);
+        try{document.execCommand('copy');}catch(e){}
+      }
+    </script>
+  </body>
+</html>
